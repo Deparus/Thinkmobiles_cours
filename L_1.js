@@ -24,3 +24,10 @@ str == number; //true
 str === number; //false
 +str == number; //true
 
+/*простой способ шифровки/расшифровки - методом toString() с известной разрядностью шифруем,
+parseInt()'ом расшифровываем. Если разрядность будем знать только мы - исходное число можно будет только предполагать*/
+
+var secretNumber = 4815162342;
+
+var encryptedNum = secretNumber.toString(36);
+var decryptedNum = parseInt(encryptedNum, 36);
