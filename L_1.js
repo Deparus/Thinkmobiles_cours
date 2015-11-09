@@ -28,6 +28,7 @@ str === number; //false
 parseInt()'ом расшифровываем. Если разрядность будем знать только мы - исходное число можно будет только предполагать*/
 
 var secretNumber = 4815162342;
+var radix = 36; // разрядность знаем только мы
 
-var encryptedNum = secretNumber.toString(36);
-var decryptedNum = parseInt(encryptedNum, 36);
+var encryptedNum = secretNumber.toString(radix);
+var decryptedNum = parseInt(encryptedNum, radix);
