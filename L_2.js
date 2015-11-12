@@ -2,9 +2,10 @@
 var foo = 1;
 function bar() {
 	                      //var foo; foo === undefined
-	if (!foo) {           //в условии true
-		var foo = 10;     //foo = 10;
-	}
+    if (!foo) {           //в условии true
+        var foo = 10;     //foo = 10;
+    }
+    
 	alert(foo);
 }
 bar();
@@ -21,9 +22,9 @@ bar();
 
 var a = 1;
 function b() {
-	a = 10;
-	return;
-	function a() {}
+    a = 10;
+    return;
+    function a() {}
 }
 b();
 console.log(a);
@@ -38,9 +39,9 @@ console.log(a);
 //--------------------- 4 --------------------------
 var a = 1;
 function b() {
-	a = 10;
-	return;
-	//function a() {}
+    a = 10;
+    return;
+    //function a() {}
 }
 b();
 console.log(a);
@@ -90,9 +91,9 @@ alert(str);
 //--------------------- 7 --------------------------
 var counter = 9;
 for(var i = 0; i < 10; i++){  
-  var str = Array(counter + 1).join('*');
-  console.log(str);
-  counter += 8 - i*2;
+    var str = Array(counter + 1).join('*');
+    console.log(str);
+    counter += 8 - i*2;
 }
 
 //--------------------- 8 --------------------------
@@ -101,9 +102,9 @@ var start = Date.now();
 var stop;
 
 while (true) {
-  stop = Date.now();
-  if (stop - start >= seconds*1000) {
-    alert(seconds + ' сек. прошло!');
-    break;
+    stop = Date.now();
+    if (stop - start >= seconds*1000) {
+        alert(seconds + ' сек. прошло!');
+        break;
   }
 };
