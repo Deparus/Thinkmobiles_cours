@@ -1,7 +1,7 @@
 //--------------------- 1 --------------------------
 var foo = 1;
 function bar() {
-	                      //var foo; foo === undefined
+	                  //var foo; foo === undefined
     if (!foo) {           //в условии true
         var foo = 10;     //foo = 10;
     }
@@ -106,5 +106,5 @@ while (true) {
     if (stop - start >= seconds*1000) {
         alert(seconds + ' сек. прошло!');
         break;
-  }
+    }
 };
