@@ -5,7 +5,7 @@ Array.prototype.getMaxSubarray = function(lng) { //lng - нужная длина
                                                  //передачей аргумента, но чат
                                                  //в скайпе помог понять что 
                                                  //это немного не то что нужно.
-                                                 //метод переписал, но возможность
+                                                 //Метод переписал, но возможность
                                                  //передачи аргумента оставил
   var tempArray = this.slice();
   var maxSum = 0;
@@ -13,9 +13,9 @@ Array.prototype.getMaxSubarray = function(lng) { //lng - нужная длина
 
   if (!arguments.length) { //при вызове метода без аргументов
 
-    for (var i = 0; i < this.length; i++) {
+    for (var i = 0; i < this.length; i++) { //перебор стартового значения
 
-      for (var j = 1; j <= this.length - i; j++) {
+      for (var j = 1; j <= this.length - i; j++) { //перебор стека его правых соседей
 
         var arr = tempArray.splice(i, j);
 
@@ -87,12 +87,12 @@ function sumBigNums(a, b) { // аргументы - числа в строков
 
   var result = [];
 
-  var arrA = a.split('').map(toNum);
+  var arrA = a.split('').map(toNum); //конвертируем строки в числовые массивы
   var arrB = b.split('').map(toNum);
 
   var shorter = (arrA.length < arrB.length) ? arrA : arrB;
 
-  while (arrA.length != arrB.length) {
+  while (arrA.length != arrB.length) { //выравниваем длину массивов 
     shorter.unshift(0);
   }
 
@@ -100,7 +100,7 @@ function sumBigNums(a, b) { // аргументы - числа в строков
 
   for (var i = arrA.length - 1; i >= 0; i--) {
 
-    var sum = arrA[i] + arrB[i] + extraNum;
+    var sum = arrA[i] + arrB[i] + extraNum; //суммирование в столбик
 
     if (sum >= 10) {
       sum -= 10;
@@ -141,7 +141,7 @@ function getDiff(arr1, arr2) {
   var b = arr2.slice();
   var element;
 
-  for (var i = 0; i < a.length; i++) {
+  for (var i = 0; i < a.length; i++) { //убираем повторения из второго массива
 
     element = b.indexOf(a[i]);
 
@@ -152,7 +152,7 @@ function getDiff(arr1, arr2) {
 
   }
 
-  for (var j = 0; j < a.length; j++) {
+  for (var j = 0; j < a.length; j++) { //убираем повторения из первого массива
 
     element = a.indexOf(b[j]);
 
